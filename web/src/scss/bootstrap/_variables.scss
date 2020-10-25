@@ -1,0 +1,163 @@
+/*
+ * THEME COLORS
+ */
+
+$white: #ffffff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000000;
+
+$primary: #67809f;
+$secondary: #6c7a89;
+$success: #00b16a;
+$info: #89c4f4;
+$warning: #fcb941;
+$danger: #EF6C79;
+$light: $gray-100;
+$dark: #2e3131;
+
+$body-bg: #f3f1ef;
+$body-color: $dark;
+$border-color: $gray-400;
+
+//$link-color:                              theme-color("primary") !default;
+//$link-decoration:                         none !default;
+//$link-hover-color:                        darken($link-color, 15%) !default;
+//$link-hover-decoration:                   underline !default;
+
+/*
+ * TYPOGRAPHY
+ */
+
+$font-family-sans-serif: sans-serif;
+$font-family-monospace: monospace;
+
+$headings-font-family: sans-serif;
+//$headings-font-weight: 700;
+
+/*
+ * CONTAINER & GRID
+ */
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px
+);
+
+$navbar-padding-x: 0;
+
+/*
+ * BORDER RADIUS
+ */
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+/*
+ * FORMS
+ */
+
+$input-btn-focus-box-shadow: none;
+$input-focus-box-shadow: none;
+$btn-focus-width: 0;
+$custom-select-focus-box-shadow: none;
+// The next two lines have no effect in disabling the button box-shadow
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
+
+$input-bg: $light;
+$input-border-color: $border-color;
+$input-focus-border-color: $gray-500;
+
+$input-disabled-bg: $gray-200;
+
+$btn-padding-x: 1.2rem;
+
+/*
+ * ALERTS
+ */
+
+$alert-bg-level: -8;
+$alert-border-level: -8;
+$alert-color-level: 5;
+
+/*
+ * CARDS
+ */
+
+$card-border-color: $white;
+
+/*
+ * TOOLTIPS
+ */
+
+$tooltip-border-radius: .25rem;
+
+/*
+ * PAGINATION
+ */
+
+$pagination-border-color: $border-color;
+$pagination-color: $body-color;
+$pagination-hover-color: $body-color;
+
+/*
+ * LIST GROUP
+ */
+
+$list-group-bg: transparent;
+$list-group-border-color: $border-color;
+
+/*
+ * TABLE
+ */
+$table-accent-bg: $gray-100;
+$table-dark-color: $white;
+$table-dark-bg: $primary;
+
+/*
+ * DROPDOWN
+ */
+
+$dropdown-color: $primary;
+$dropdown-bg: $white;
+$dropdown-border-color: $light;
+
+$dropdown-link-color: $primary;
+$dropdown-link-hover-color: $primary;
+$dropdown-link-hover-bg: $light;
+
+$dropdown-link-active-color: $primary;
+$dropdown-link-active-bg: $white;
+
+/*
+ * BREADCRUMBS
+ */
+
+$breadcrumb-divider: '>';
+$breadcrumb-bg: transparent;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+
+$nav-tabs-border-color: $white;
+$nav-tabs-link-hover-border-color: transparent;
+$nav-tabs-link-active-border-color: $white;
+$nav-tabs-link-active-bg: $white;
