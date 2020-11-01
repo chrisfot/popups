@@ -56,6 +56,9 @@ export default {
         if (this.exitIntent) {
             this.initExitIntent();
         }
+        if (this.timer || this.scroll || this.exitIntent) {
+            this.initHideOnEsc();
+        }
     },
 
     methods: {
@@ -153,6 +156,14 @@ export default {
 
                     lastPosition = position;
                 }, 100);
+            });
+        },
+
+        initHideOnEsc() {
+            document.addEventListener('keyup', (e) => {
+                if (e.code === 'Escape') {
+                    this.show = false;
+                }
             });
         }
 
