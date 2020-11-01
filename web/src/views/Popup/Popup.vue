@@ -107,16 +107,17 @@ export default {
         },
 
         initExitIntent() {
-            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 this.initExitIntentMobile();
-            }else{
+            } else {
                 this.initExitIntentDesktop();
             }
         },
 
         initExitIntentDesktop() {
             document.addEventListener('mouseleave', (e) => {
-                if (e.pageY < 250) {
+                // if cursor leaves towards the address bar
+                if (e.y < 250) {
                     if (this.isEnabled() && !this.shownAlready) {
                         if (this.timer || this.scroll) {
                             if (this.isExitIntentActive) {
@@ -137,6 +138,7 @@ export default {
 
                 timeoutHandle = setTimeout(() => {
                     position = getVerticalScrollPercentage();
+                    // if the user scrolled upwards
                     if (position < lastPosition) {
                         if (this.isEnabled() && !this.shownAlready) {
                             if (this.timer || this.scroll) {
