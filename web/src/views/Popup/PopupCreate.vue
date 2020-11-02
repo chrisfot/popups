@@ -74,7 +74,11 @@
                                 </select>
                             </div>
 
-                            <button class="btn btn-primary mt-4" @click="save">Save</button>
+                            <button class="btn btn-primary my-4" @click="save">Save</button>
+
+                            <div class="alert alert-danger" v-if="errors.length > 0">
+                                <p class="mb-0" v-for="error in errors">{{ error }}</p>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -104,6 +108,7 @@ export default {
             isTimerSet: false,
             isScrollSet: false,
             triggerOptions: [1,2,3,4,5,6,7,15,30,60,90,180,365],
+            errors: [],
         };
     },
 
@@ -132,9 +137,17 @@ export default {
                 this.popup.triggerEvery,
             ];
 
+            this.errors = [];
+
             apiCreatePopup(...data).then(response => {
                 if (response.success) {
                     this.$router.push({ path: `/page/${response.result.page_id}` });
+                } else {
+                    for (const field in response.result) {
+                        response.result[field].forEach(error => {
+                            this.errors.push(error);
+                        });
+                    }
                 }
             });
         },
