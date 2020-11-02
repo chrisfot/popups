@@ -71,7 +71,10 @@ export default {
             if (this.triggerEvery) {
                 Cookies.set('popup-' + this.id, 'hide', { expires: this.triggerEvery });
             }
+
             this.show = true;
+
+            // Comment out to show the popup on every event trigger
             this.shownAlready = true;
         },
 

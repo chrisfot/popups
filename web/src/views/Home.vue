@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import {apiGetPages} from '../api/popups.api.js';
+import {apiGetPages} from '@/api/popups.api.js';
 
 export default {
     name: 'Home',

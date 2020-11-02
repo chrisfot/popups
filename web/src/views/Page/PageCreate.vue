@@ -40,6 +40,8 @@ export default {
 
     methods: {
         save() {
+            this.displayFormErrors = true;
+            
             if (this.isValidTitle) {
                 apiCreatePage(this.title).then(response => {
                     if (response.success) {
